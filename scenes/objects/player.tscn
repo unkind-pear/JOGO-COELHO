@@ -424,8 +424,8 @@ _data = {
 &"walk": SubResource("Animation_6dywr")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xeqme"]
-size = Vector2(162.5, 85)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnuka"]
+size = Vector2(208.5, 104.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6nhbw"]
 size = Vector2(119, 91)
@@ -448,7 +448,6 @@ position = Vector2(0, -170)
 sprite_frames = SubResource("SpriteFrames_ksjmp")
 animation = &"jump"
 autoplay = "idle"
-frame = 1
 
 [node name="AnimationPlayer" parent="SpritePosition/AnimatedSprite2D" index="0"]
 libraries = {
@@ -457,13 +456,11 @@ libraries = {
 autoplay = "idle"
 
 [node name="DamageEmitter" parent="." index="2"]
-position = Vector2(0, -253.5)
-collision_mask = 96
 monitoring = false
 
 [node name="CollisionShape2D" parent="DamageEmitter" index="0"]
-position = Vector2(168, 0)
-shape = SubResource("RectangleShape2D_xeqme")
+position = Vector2(171.75, -249.75)
+shape = SubResource("RectangleShape2D_fnuka")
 
 [node name="DamageReceiver" parent="." index="3"]
 monitoring = true

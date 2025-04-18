@@ -111,7 +111,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcxup"]
-size = Vector2(156, 126)
+size = Vector2(171, 112)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xuwuc"]
 size = Vector2(141.5, 225)
@@ -139,11 +139,10 @@ libraries = {
 }
 
 [node name="DamageEmitter" parent="." index="2"]
-collision_mask = 96
 monitoring = false
 
 [node name="CollisionShape2D" parent="DamageEmitter" index="0"]
-position = Vector2(153, -154)
+position = Vector2(161, -153)
 shape = SubResource("RectangleShape2D_tcxup")
 
 [node name="DamageReceiver" parent="." index="3"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bgcrh8nblj31w"]
 
 [ext_resource type="Script" uid="uid://bdqq6iiu0mv64" path="res://scripts/superclasses/character.gd" id="1_fx8i1"]
-[ext_resource type="PackedScene" uid="uid://bmcmtvk34xx3n" path="res://scenes/colliders/danage_emitter.tscn" id="2_ru2vu"]
+[ext_resource type="PackedScene" uid="uid://cfi515ct17bd1" path="res://scenes/colliders/damage_emitter.tscn" id="2_fx8i1"]
 [ext_resource type="PackedScene" uid="uid://bdmcafd7uhyyo" path="res://scenes/colliders/damage_receiver.tscn" id="3_njknj"]
 
 [node name="character" type="CharacterBody2D"]
@@ -17,7 +17,7 @@ script = ExtResource("1_fx8i1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SpritePosition/AnimatedSprite2D"]
 
-[node name="DamageEmitter" parent="." instance=ExtResource("2_ru2vu")]
+[node name="DamageEmitter" parent="." instance=ExtResource("2_fx8i1")]
 
 [node name="DamageReceiver" parent="." instance=ExtResource("3_njknj")]
 
