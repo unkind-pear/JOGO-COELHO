@@ -1,0 +1,56 @@
+class_name Character
+extends CharacterBody2D
+
+@export var health: int
+@export var damage: int
+@export var speed: float
+
+var animation_player
+var character_sprite
+var sprite_position
+var damage_emitter
+enum State {IDLE,WALK,ATTACK,TAKEOFF,JUMP,LAND}
+var state = State.IDLE
+
+func _ready() -> void:
+	animation_player = get_node("SpritePosition/AnimatedSprite2D/AnimationPlayer")
+	character_sprite = get_node("SpritePosition/AnimatedSprite2D")
+	sprite_position = get_node("SpritePosition")
+	damage_emitter = get_node("DamageEmitter")
+	damage_emitter.area_entered.connect(on_emit_damage.bind())
+
+func handle_animations() -> void:
+	if state == State.IDLE:
+		animation_player.play("idle")
+	elif state == State.WALK:
+		animation_player.play("walk")
+	elif state == State.ATTACK:
+		animation_player.play("punch")
+	elif state == State.JUMP:
+		animation_player.play("jump")
+	elif state == State.TAKEOFF:
+		animation_player.play("takeoff")
+	elif state == State.LAND:
+		animation_player.play("land")	
+		
+func flip_sprites() -> void:
+	if velocity.x > 0:
+		sprite_position.scale.x = 1
+		damage_emitter.scale.x = 1
+	elif velocity.x < 0:
+		sprite_position.scale.x = -1
+		damage_emitter.scale.x = -1
+		
+func can_attack() -> bool:
+	return state == State.IDLE or state == State.WALK
+
+func can_move() -> bool:
+	return state == State.IDLE or state == State.WALK
+	
+func on_action_complete() -> void:
+	state = State.IDLE
+
+func on_emit_damage(damage_receiver: DamageReceiver) -> void:
+	var direction := Vector2.LEFT if damage_receiver.global_position.x < global_position.x else Vector2.RIGHT
+	damage_receiver.damage_received.emit(damage,direction)
+	#print(damage_receiver)

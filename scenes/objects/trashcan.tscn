@@ -1,0 +1,281 @@
+[gd_scene load_steps=21 format=3 uid="uid://dcvx26q6aa1nn"]
+
+[ext_resource type="PackedScene" uid="uid://b0k80lmfir7mu" path="res://scenes/superclasses/destructible_object.tscn" id="1_f6caq"]
+[ext_resource type="Texture2D" uid="uid://kiiwrfap274x" path="res://assets/Downtown Beatdown Asset Pack/Background Assets/Trashcans/trashcan_destruction_00.png" id="2_21van"]
+[ext_resource type="Script" uid="uid://1ig53hkdos3u" path="res://scripts/objects/trashcan.gd" id="2_bx0wm"]
+[ext_resource type="Texture2D" uid="uid://qam8saton60c" path="res://assets/Downtown Beatdown Asset Pack/Background Assets/Trashcans/trashcan_destruction_01.png" id="3_bx0wm"]
+[ext_resource type="Texture2D" uid="uid://dsq4m3dy16uuq" path="res://assets/Downtown Beatdown Asset Pack/Background Assets/Trashcans/trashcan_destruction_02.png" id="4_mej4l"]
+[ext_resource type="Texture2D" uid="uid://caxr5nejwbxmy" path="res://assets/Downtown Beatdown Asset Pack/Background Assets/Trashcans/trashcan_destruction_03.png" id="5_uwgdc"]
+[ext_resource type="Texture2D" uid="uid://bjg5w3hlhgbq3" path="res://assets/Downtown Beatdown Asset Pack/Background Assets/Trashcans/trashcan_destruction_04.png" id="6_pwysm"]
+[ext_resource type="Texture2D" uid="uid://xipeetsnskh0" path="res://assets/Downtown Beatdown Asset Pack/Background Assets/Trashcans/trashcan_destruction_05.png" id="7_lytnr"]
+[ext_resource type="Texture2D" uid="uid://br86rhu2gn3bb" path="res://assets/Downtown Beatdown Asset Pack/Background Assets/Trashcans/trashcan_destruction_05_1.png" id="8_f0qmi"]
+[ext_resource type="Texture2D" uid="uid://wcqjdoas7k5" path="res://assets/Downtown Beatdown Asset Pack/Background Assets/Trashcans/trashcan_destruction_06_2.png" id="9_vpnse"]
+[ext_resource type="Texture2D" uid="uid://nbcy6ka3qrof" path="res://assets/Downtown Beatdown Asset Pack/Background Assets/Trashcans/trashcan_destruction_07_2.png" id="10_h0wy6"]
+[ext_resource type="Texture2D" uid="uid://cgqg5vc4b1oq4" path="res://assets/Downtown Beatdown Asset Pack/Background Assets/Trashcans/trashcan_1_clean_50.png" id="11_ipkvt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e1m1t"]
+radius = 12.0
+height = 158.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yktgd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_21van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bx0wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mej4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uwgdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pwysm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lytnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_f0qmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vpnse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h0wy6")
+}],
+"loop": true,
+"name": &"destructing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ipkvt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_s1nsh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -100)]
+}
+
+[sub_resource type="Animation" id="Animation_bx0wm"]
+resource_name = "destroyed"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"destructing"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, -430)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"pop_out"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_sbc2g"]
+resource_name = "destructing"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"destructing"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, -430)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"reset_animation"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_mej4l"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -100)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_28jh6"]
+_data = {
+&"RESET": SubResource("Animation_s1nsh"),
+&"destroyed": SubResource("Animation_bx0wm"),
+&"destructing": SubResource("Animation_sbc2g"),
+&"idle": SubResource("Animation_mej4l")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itrv3"]
+size = Vector2(179, 262)
+
+[node name="trashcan" instance=ExtResource("1_f6caq")]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("2_bx0wm")
+knockback_intensity = 50.0
+health = 20
+
+[node name="CollisionShape2D" parent="." index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_e1m1t")
+
+[node name="AnimatedSprite2D" parent="SpritePosition" index="0"]
+position = Vector2(0, -100)
+scale = Vector2(0.791753, 0.792616)
+sprite_frames = SubResource("SpriteFrames_yktgd")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimationPlayer" parent="SpritePosition/AnimatedSprite2D" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_28jh6")
+}
+
+[node name="DamageReceiver" parent="." index="2"]
+collision_layer = 64
+monitoring = true
+
+[node name="CollisionShape2D" parent="DamageReceiver" index="0"]
+position = Vector2(0, -139)
+shape = SubResource("RectangleShape2D_itrv3")
+
+[editable path="DamageReceiver"]

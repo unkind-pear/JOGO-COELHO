@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0k80lmfir7mu"]
+
+[ext_resource type="Script" uid="uid://bycivfkk4m3hy" path="res://scripts/superclasses/destructible_object.gd" id="1_hsfjt"]
+[ext_resource type="PackedScene" uid="uid://bdmcafd7uhyyo" path="res://scenes/colliders/damage_receiver.tscn" id="2_l3wri"]
+
+[node name="destructible_object" type="StaticBody2D"]
+script = ExtResource("1_hsfjt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="SpritePosition" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpritePosition"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpritePosition/AnimatedSprite2D"]
+
+[node name="DamageReceiver" parent="." instance=ExtResource("2_l3wri")]
+
+[editable path="DamageReceiver"]
