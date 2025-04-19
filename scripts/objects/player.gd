@@ -50,5 +50,5 @@ func on_takeoff_complete() -> void:
 	height_speed = jump_intensity
 	
 func on_land_complete() -> void:
-	state =State.IDLE
+	state = State.IDLE
 	

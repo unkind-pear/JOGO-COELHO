@@ -1,22 +1,96 @@
-[gd_scene load_steps=18 format=3 uid="uid://i3rh27vrxfbi"]
+[gd_scene load_steps=78 format=3 uid="uid://i3rh27vrxfbi"]
 
 [ext_resource type="PackedScene" uid="uid://bgcrh8nblj31w" path="res://scenes/superclasses/character.tscn" id="1_tcsim"]
-[ext_resource type="Texture2D" uid="uid://c0db4pkitja52" path="res://assets/jogo_pascoa_sprites/player/idle01.png" id="2_so0xd"]
+[ext_resource type="Texture2D" uid="uid://c0db4pkitja52" path="res://assets/jogo_pascoa_sprites/player/idle/idle01.png" id="2_so0xd"]
 [ext_resource type="Script" uid="uid://bj0dk64vdw7p8" path="res://scripts/objects/coelho_1.gd" id="2_tcxup"]
-[ext_resource type="Texture2D" uid="uid://bbieslmj4y44q" path="res://assets/jogo_pascoa_sprites/player/idle02.png" id="3_6p6f3"]
-[ext_resource type="Texture2D" uid="uid://b7dqe65mfqepq" path="res://assets/jogo_pascoa_sprites/player/idle03.png" id="4_tcxup"]
-[ext_resource type="Texture2D" uid="uid://bd2k1slhkwxnf" path="res://assets/jogo_pascoa_sprites/player/idle04.png" id="5_xuwuc"]
-[ext_resource type="Texture2D" uid="uid://dk24v0fk86rt" path="res://assets/jogo_pascoa_sprites/player/idle05.png" id="6_yqgcc"]
-[ext_resource type="Texture2D" uid="uid://c6eqsc7r4x233" path="res://assets/jogo_pascoa_sprites/player/idle06.png" id="7_illg1"]
-[ext_resource type="Texture2D" uid="uid://ced04wsjhv6ws" path="res://assets/jogo_pascoa_sprites/player/idle07.png" id="8_xhynx"]
-[ext_resource type="Texture2D" uid="uid://csi1cjinj8npm" path="res://assets/jogo_pascoa_sprites/player/idle08.png" id="9_3wm5c"]
+[ext_resource type="Texture2D" uid="uid://di7bb0fws2m4g" path="res://assets/jogo_pascoa_sprites/player/fire/fire00.png" id="3_1onrg"]
+[ext_resource type="Texture2D" uid="uid://bbieslmj4y44q" path="res://assets/jogo_pascoa_sprites/player/idle/idle02.png" id="3_6p6f3"]
+[ext_resource type="Texture2D" uid="uid://cooo1wdfnjj1s" path="res://assets/jogo_pascoa_sprites/player/fire/fire01.png" id="4_mkkhm"]
+[ext_resource type="Texture2D" uid="uid://b7dqe65mfqepq" path="res://assets/jogo_pascoa_sprites/player/idle/idle03.png" id="4_tcxup"]
+[ext_resource type="Texture2D" uid="uid://bqfe6qwy4j7kd" path="res://assets/jogo_pascoa_sprites/player/fire/fire02.png" id="5_dbnkw"]
+[ext_resource type="Texture2D" uid="uid://bd2k1slhkwxnf" path="res://assets/jogo_pascoa_sprites/player/idle/idle04.png" id="5_xuwuc"]
+[ext_resource type="Texture2D" uid="uid://dswdfv55y4t2s" path="res://assets/jogo_pascoa_sprites/player/fire/fire03.png" id="6_4fvyv"]
+[ext_resource type="Texture2D" uid="uid://dk24v0fk86rt" path="res://assets/jogo_pascoa_sprites/player/idle/idle05.png" id="6_yqgcc"]
+[ext_resource type="Texture2D" uid="uid://c6eqsc7r4x233" path="res://assets/jogo_pascoa_sprites/player/idle/idle06.png" id="7_illg1"]
+[ext_resource type="Texture2D" uid="uid://dm56lrgrl566u" path="res://assets/jogo_pascoa_sprites/player/fire/fire04.png" id="7_xyt86"]
+[ext_resource type="Texture2D" uid="uid://ced04wsjhv6ws" path="res://assets/jogo_pascoa_sprites/player/idle/idle07.png" id="8_xhynx"]
+[ext_resource type="Texture2D" uid="uid://csi1cjinj8npm" path="res://assets/jogo_pascoa_sprites/player/idle/idle08.png" id="9_3wm5c"]
+[ext_resource type="Texture2D" uid="uid://1l8jg7il1iiq" path="res://assets/jogo_pascoa_sprites/player/jump/jump00.png" id="11_tnm62"]
+[ext_resource type="Texture2D" uid="uid://d2af6jeijgh0i" path="res://assets/jogo_pascoa_sprites/player/walk/walk00.png" id="11_yk3p0"]
+[ext_resource type="Texture2D" uid="uid://udxfs2putkot" path="res://assets/jogo_pascoa_sprites/player/jump/jump01.png" id="12_cia5d"]
+[ext_resource type="Texture2D" uid="uid://b4nte3vi3qkgv" path="res://assets/jogo_pascoa_sprites/player/walk/walk01.png" id="12_dx10a"]
+[ext_resource type="Texture2D" uid="uid://ci5xu2ke525gy" path="res://assets/jogo_pascoa_sprites/player/jump/jump02.png" id="13_vmupq"]
+[ext_resource type="Texture2D" uid="uid://ldib3r56sjkk" path="res://assets/jogo_pascoa_sprites/player/walk/walk02.png" id="13_xevem"]
+[ext_resource type="Texture2D" uid="uid://d3w8vs8uymmln" path="res://assets/jogo_pascoa_sprites/player/jump/jump03.png" id="14_72sak"]
+[ext_resource type="Texture2D" uid="uid://cetlsvtnlen2x" path="res://assets/jogo_pascoa_sprites/player/walk/walk03.png" id="14_knqav"]
+[ext_resource type="Texture2D" uid="uid://dgi1xjhmpyfbk" path="res://assets/jogo_pascoa_sprites/player/jump/jump04.png" id="15_d8c65"]
+[ext_resource type="Texture2D" uid="uid://b4tibijxy5nms" path="res://assets/jogo_pascoa_sprites/player/walk/walk04.png" id="15_nkilj"]
+[ext_resource type="Texture2D" uid="uid://c1668wbi36f13" path="res://assets/jogo_pascoa_sprites/player/jump/jump05.png" id="16_1onrg"]
+[ext_resource type="Texture2D" uid="uid://0rjjps2vo01c" path="res://assets/jogo_pascoa_sprites/player/walk/walk05.png" id="16_26bu8"]
+[ext_resource type="Texture2D" uid="uid://cw1bqr528x1ew" path="res://assets/jogo_pascoa_sprites/player/jump/jump06.png" id="17_mkkhm"]
+[ext_resource type="Texture2D" uid="uid://k3vcojptjmme" path="res://assets/jogo_pascoa_sprites/player/walk/walk06.png" id="17_twbvl"]
+[ext_resource type="Texture2D" uid="uid://bcn7gl6lmoyxk" path="res://assets/jogo_pascoa_sprites/player/jump/jump07.png" id="18_dbnkw"]
+[ext_resource type="Texture2D" uid="uid://ce8378j7x0er5" path="res://assets/jogo_pascoa_sprites/player/walk/walk07.png" id="18_ghfed"]
+[ext_resource type="Texture2D" uid="uid://cnosyhk6s6cw" path="res://assets/jogo_pascoa_sprites/player/jump/jump08.png" id="19_4fvyv"]
+[ext_resource type="Texture2D" uid="uid://btqjko2o6ck4u" path="res://assets/jogo_pascoa_sprites/player/walk/walk08.png" id="19_p0n61"]
+[ext_resource type="Texture2D" uid="uid://f0tj4befxnxk" path="res://assets/jogo_pascoa_sprites/player/walk/walk09.png" id="20_o4msw"]
+[ext_resource type="Texture2D" uid="uid://cq67c4u6dpyie" path="res://assets/jogo_pascoa_sprites/player/jump/jump09.png" id="20_xyt86"]
+[ext_resource type="Texture2D" uid="uid://dipxhqs6lekxx" path="res://assets/jogo_pascoa_sprites/player/jump/jump10.png" id="21_0tf8x"]
+[ext_resource type="Texture2D" uid="uid://mebuv1cqifvq" path="res://assets/jogo_pascoa_sprites/player/walk/walk10.png" id="21_6lknm"]
+[ext_resource type="Texture2D" uid="uid://dgrycfobwlcq" path="res://assets/jogo_pascoa_sprites/player/walk/walk11.png" id="22_tnm62"]
+[ext_resource type="Texture2D" uid="uid://048m7xbxvuwl" path="res://assets/jogo_pascoa_sprites/player/walk/walk12.png" id="23_cia5d"]
+[ext_resource type="Texture2D" uid="uid://ctr1yvkr2n75c" path="res://assets/jogo_pascoa_sprites/player/walk/walk13.png" id="24_vmupq"]
+[ext_resource type="Texture2D" uid="uid://bgakgfgj86ymo" path="res://assets/jogo_pascoa_sprites/player/walk/walk14.png" id="25_72sak"]
+[ext_resource type="Texture2D" uid="uid://cvg71qcnidarq" path="res://assets/jogo_pascoa_sprites/player/walk/walk15.png" id="26_d8c65"]
+[ext_resource type="Texture2D" uid="uid://d1ovv87o4k771" path="res://assets/jogo_pascoa_sprites/player/walk/walk16.png" id="27_1onrg"]
+[ext_resource type="Texture2D" uid="uid://pnpkawo8vk08" path="res://assets/jogo_pascoa_sprites/player/walk/walk17.png" id="28_mkkhm"]
+[ext_resource type="Texture2D" uid="uid://ptwm2au8ehe1" path="res://assets/jogo_pascoa_sprites/player/walk/walk18.png" id="29_dbnkw"]
+[ext_resource type="Texture2D" uid="uid://cn51gt2scsaxs" path="res://assets/jogo_pascoa_sprites/player/walk/walk19.png" id="30_4fvyv"]
+[ext_resource type="Texture2D" uid="uid://c3umxad74n10h" path="res://assets/jogo_pascoa_sprites/player/walk/walk20.png" id="31_xyt86"]
+[ext_resource type="Texture2D" uid="uid://dj8teawo5o0ng" path="res://assets/jogo_pascoa_sprites/player/walk/walk21.png" id="32_0tf8x"]
+[ext_resource type="Texture2D" uid="uid://c0yesxrqck85s" path="res://assets/jogo_pascoa_sprites/player/walk/walk22.png" id="33_2gxl5"]
+[ext_resource type="Texture2D" uid="uid://crdid0gihfyno" path="res://assets/jogo_pascoa_sprites/player/walk/walk23.png" id="34_vtmpv"]
+[ext_resource type="Texture2D" uid="uid://cx6bj5ygtbney" path="res://assets/jogo_pascoa_sprites/player/walk/walk24.png" id="35_kbtqx"]
+[ext_resource type="Texture2D" uid="uid://edp2dpsp7np2" path="res://assets/jogo_pascoa_sprites/player/walk/walk25.png" id="36_tsffg"]
+[ext_resource type="Texture2D" uid="uid://c6xjd7yo4m8i2" path="res://assets/jogo_pascoa_sprites/player/walk/walk26.png" id="37_pr08b"]
+[ext_resource type="Texture2D" uid="uid://4u6yix2eiyos" path="res://assets/jogo_pascoa_sprites/player/walk/walk27.png" id="38_wjy0c"]
+[ext_resource type="Texture2D" uid="uid://c2qyykephgsto" path="res://assets/jogo_pascoa_sprites/player/walk/walk28.png" id="39_eb1tj"]
+[ext_resource type="Texture2D" uid="uid://c1eywfck3o6ck" path="res://assets/jogo_pascoa_sprites/player/walk/walk29.png" id="40_7e56h"]
+[ext_resource type="Texture2D" uid="uid://w8govc4b653" path="res://assets/jogo_pascoa_sprites/player/walk/walk30.png" id="41_10yn1"]
+[ext_resource type="Texture2D" uid="uid://om0hesn7jxwg" path="res://assets/jogo_pascoa_sprites/player/walk/walk31.png" id="42_ek2o8"]
+[ext_resource type="Texture2D" uid="uid://d2hirx0mmnev6" path="res://assets/jogo_pascoa_sprites/player/walk/walk32.png" id="43_cy4xb"]
+[ext_resource type="Texture2D" uid="uid://b0a8typapghe3" path="res://assets/jogo_pascoa_sprites/player/walk/walk33.png" id="44_aedd8"]
+[ext_resource type="Texture2D" uid="uid://b20pcwq45f7if" path="res://assets/jogo_pascoa_sprites/player/walk/walk34.png" id="45_xeydf"]
+[ext_resource type="Texture2D" uid="uid://cqv653jmkurx6" path="res://assets/jogo_pascoa_sprites/player/walk/walk35.png" id="46_6mua6"]
+[ext_resource type="Texture2D" uid="uid://c58fvi56ucryp" path="res://assets/jogo_pascoa_sprites/player/walk/walk36.png" id="47_uuols"]
+[ext_resource type="PackedScene" uid="uid://b0stvaii5q17" path="res://scenes/objects/bullet.tscn" id="64_mkkhm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_guwhb"]
-radius = 13.0
-height = 164.0
+radius = 20.0
+height = 130.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ha5mp"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1onrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mkkhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dbnkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4fvyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xyt86")
+}],
+"loop": true,
+"name": &"fire",
+"speed": 30.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_so0xd")
@@ -44,7 +118,179 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_d8c65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1onrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mkkhm")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_mkkhm")
+}],
+"loop": true,
+"name": &"jump_loop",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_dbnkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4fvyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xyt86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_0tf8x")
+}],
+"loop": true,
+"name": &"land",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_tnm62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cia5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vmupq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_72sak")
+}],
+"loop": true,
+"name": &"takeoff",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_yk3p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dx10a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xevem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_knqav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nkilj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_26bu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_twbvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ghfed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_p0n61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_o4msw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6lknm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_tnm62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_cia5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vmupq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_72sak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_d8c65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1onrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_mkkhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_dbnkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_4fvyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_xyt86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_0tf8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2gxl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_vtmpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_kbtqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_tsffg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_pr08b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_wjy0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_eb1tj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_7e56h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_10yn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_ek2o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_cy4xb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_aedd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_xeydf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_6mua6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_uuols")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 60.0
 }]
 
 [sub_resource type="Animation" id="Animation_5wwfg"]
@@ -59,7 +305,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -72,6 +318,49 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_0tf8x"]
+resource_name = "fire"
+length = 0.1667
+step = 0.0333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"fire"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333, 0.0666, 0.0999, 0.1332),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.166667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_action_complete"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_84cfa"]
@@ -103,15 +392,235 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+
+[sub_resource type="Animation" id="Animation_tnm62"]
+resource_name = "jump"
+length = 0.15
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"jump"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.15),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_jump_animation_end"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_72sak"]
+resource_name = "jump_loop"
+length = 0.05
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"jump_loop"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_cia5d"]
+resource_name = "land"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"land"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_land_complete"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_vmupq"]
+resource_name = "takeoff"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"takeoff"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_takeoff_complete"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_rvq73"]
+resource_name = "walk"
+length = 0.6167
+loop_mode = 1
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0167, 0.0334, 0.0501, 0.0668, 0.0835, 0.1002, 0.1169, 0.1336, 0.1503, 0.167, 0.1837, 0.2004, 0.2171, 0.2338, 0.2505, 0.2672, 0.2839, 0.3006, 0.3173, 0.334, 0.3507, 0.3674, 0.3841, 0.4008, 0.4175, 0.4342, 0.4509, 0.4676, 0.4843, 0.501, 0.5177, 0.5344, 0.5511, 0.5678, 0.5845, 0.6012),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../DamageEmitter:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_57gim"]
 _data = {
 &"RESET": SubResource("Animation_5wwfg"),
-&"idle": SubResource("Animation_84cfa")
+&"fire": SubResource("Animation_0tf8x"),
+&"idle": SubResource("Animation_84cfa"),
+&"jump": SubResource("Animation_tnm62"),
+&"jump_loop": SubResource("Animation_72sak"),
+&"land": SubResource("Animation_cia5d"),
+&"takeoff": SubResource("Animation_vmupq"),
+&"walk": SubResource("Animation_rvq73")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcxup"]
-size = Vector2(171, 112)
+size = Vector2(171, 115.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xuwuc"]
 size = Vector2(141.5, 225)
@@ -119,19 +628,20 @@ size = Vector2(141.5, 225)
 [node name="coelho1" instance=ExtResource("1_tcsim")]
 collision_layer = 3
 script = ExtResource("2_tcxup")
-jump_intensity = 0.0
+health = 100
+meele_damage = 4
+speed = 200.0
 
 [node name="CollisionShape2D" parent="." index="0"]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_guwhb")
 
 [node name="SpritePosition" parent="." index="1"]
-position = Vector2(80, -185)
+position = Vector2(75, -170)
 
 [node name="AnimatedSprite2D" parent="SpritePosition" index="0"]
 sprite_frames = SubResource("SpriteFrames_ha5mp")
-animation = &"idle"
-frame = 1
+animation = &"fire"
 
 [node name="AnimationPlayer" parent="SpritePosition/AnimatedSprite2D" index="0"]
 libraries = {
@@ -139,18 +649,29 @@ libraries = {
 }
 
 [node name="DamageEmitter" parent="." index="2"]
+position = Vector2(0, -135)
+collision_mask = 96
 monitoring = false
 
 [node name="CollisionShape2D" parent="DamageEmitter" index="0"]
-position = Vector2(161, -153)
+position = Vector2(112, -1)
 shape = SubResource("RectangleShape2D_tcxup")
 
 [node name="DamageReceiver" parent="." index="3"]
+position = Vector2(0, -135)
 collision_layer = 16
 
 [node name="CollisionShape2D" parent="DamageReceiver" index="0"]
-position = Vector2(-13.25, -126.5)
+position = Vector2(-14, 20)
 shape = SubResource("RectangleShape2D_xuwuc")
+
+[node name="BulletFlip" type="Node2D" parent="." index="4"]
+position = Vector2(0, -132)
+
+[node name="BulletSpawn" type="Marker2D" parent="BulletFlip" index="0"]
+position = Vector2(230, 0)
+
+[node name="bullet" parent="BulletFlip/BulletSpawn" index="0" instance=ExtResource("64_mkkhm")]
 
 [editable path="DamageEmitter"]
 [editable path="DamageReceiver"]

@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhn4yb876vq4j"]
+[gd_scene load_steps=5 format=3 uid="uid://dhn4yb876vq4j"]
 
 [ext_resource type="PackedScene" uid="uid://ckcrsiybe8840" path="res://scenes/stages/cidade.tscn" id="2_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://boktmtlthe53k" path="res://scenes/objects/player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://i3rh27vrxfbi" path="res://scenes/objects/coelho_1.tscn" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://dcvx26q6aa1nn" path="res://scenes/objects/trashcan.tscn" id="4_lbhrr"]
 
@@ -35,11 +34,13 @@ shape = SubResource("RectangleShape2D_lnu2h")
 [node name="actors_container" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="trashcan" parent="actors_container" instance=ExtResource("4_lbhrr")]
-position = Vector2(1173, 1014)
-
 [node name="coelho1" parent="actors_container" instance=ExtResource("4_iywne")]
-position = Vector2(918, 895)
+position = Vector2(791, 1005)
+collision_mask = 13
 
-[node name="player" parent="actors_container" instance=ExtResource("2_yqjtg")]
-position = Vector2(2051, 827)
+[node name="trashcan" parent="actors_container" instance=ExtResource("4_lbhrr")]
+position = Vector2(1196, 968)
+
+[editable path="actors_container/coelho1"]
+[editable path="actors_container/coelho1/DamageEmitter"]
+[editable path="actors_container/coelho1/DamageReceiver"]

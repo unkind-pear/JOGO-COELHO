@@ -448,6 +448,7 @@ position = Vector2(0, -170)
 sprite_frames = SubResource("SpriteFrames_ksjmp")
 animation = &"jump"
 autoplay = "idle"
+frame = 1
 
 [node name="AnimationPlayer" parent="SpritePosition/AnimatedSprite2D" index="0"]
 libraries = {
